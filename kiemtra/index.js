@@ -45,23 +45,10 @@
 
 // Xây dựng website rút gọn link từ API cho sẵn (đọc tài liệu sau để lấy API: https://shrtco.de/docs/), Các chức năng như trong video minh hoạ https://youtu.be/hhdiS8TGiPQ
 import Main from "../mail.js";
-import Login from "./login.js";
-//    const Main1 = new Main();
-    class Component{
-        container() {
-            this.$container = document.createElement('div');
-            this.$Main1 = new Main();
-            this.$Login1 = new Login();
-        }
-        render() {
-            this.$container.appendChild(this.$Main1.render());
-            this.$container.appendChild(this.$Login1.render());
-            return this.$container;
-        }
-    }
-    const main = document.getElementById('root');
-    const view = new Component();
-     main.appendChild(view);
+const main = document.getElementById('root');
+   const Main1 = new Main();
+
+main.appendChild(Main1.render());
 
 
 
